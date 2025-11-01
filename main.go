@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/VictorBion/gopportunities/config"
+	_ "github.com/VictorBion/gopportunities/docs"
 	"github.com/VictorBion/gopportunities/router"
 )
 
@@ -10,7 +11,7 @@ var (
 )
 
 func main() {
-	logger = config.GetLogger("main") 
+	logger = config.GetLogger("main")
 	err := config.Init()
 	if err != nil {
 		logger.Errorf("Config initialization error: %v", err)
